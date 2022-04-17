@@ -8,7 +8,7 @@ function ButtonAccess({ children, isTarget, name }) {
       {isTarget ? (
         <LinkChakra as={Link} to={name} display="flex" color="hsl(231, 100%, 99%)" zIndex={20} justifyContent="center">
           <Text
-            fontSize={{ sm: ".625rem", md: ".718rem" }}
+            fontSize={{ base: ".625rem", md: ".688rem" }}
             position="absolute"
             transition=".4s"
             fontWeight={500}
@@ -22,7 +22,7 @@ function ButtonAccess({ children, isTarget, name }) {
       ) : (
         <LinkChakra as={Link} to={name} display="flex">
           <Text
-            fontSize={{ sm: ".625rem", md: ".688rem" }}
+            fontSize={{ base: ".625rem", md: ".688rem" }}
             position="absolute"
             fontWeight={500}
             transition=".4s"

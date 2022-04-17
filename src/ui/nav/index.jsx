@@ -23,7 +23,7 @@ function Nav() {
         gap="2rem"
         justifyContent="center"
         position="relative"
-        transform={{ sm: "scale(0.8)", lg: "scale(1.1)" }}
+        transform={{ base: "scale(0.8)", md: "scale(0.9)", lg: "scale(1.1)" }}
       >
         <ButtonAccess isTarget={currentTarget === 0} name="Home">
           <AiOutlineHome size="1.5rem" />

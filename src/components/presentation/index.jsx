@@ -50,7 +50,6 @@ function Presentation() {
           </Stack>
           <Stack alignItems="center" gap={1}>
             <Stack textAlign="center">
-              {/* <Text color="hsl(231, 69%, 80%)">Hi, my name is</Text> */}
               <Heading size="lg" marginTop="0 !important">
                 Matias Sanchez
               </Heading>
