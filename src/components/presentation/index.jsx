@@ -33,7 +33,7 @@ function Presentation() {
 
   return (
     <motion.div ref={ref} layout animate={animation} exit={{ opacity: 0 }} initial={{ x: -35, opacity: 0 }}>
-      <Stack h="100vh" id="Home">
+      <Stack h="100vh" justifyContent="center" id="Home">
         <Stack justifyContent="center" minH={500} gap={4}>
           <Stack alignItems="center">
             <Box>
