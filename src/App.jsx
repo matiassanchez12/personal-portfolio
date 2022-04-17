@@ -1,0 +1,23 @@
+import { Container } from "@chakra-ui/react";
+import React from "react";
+import About from "./components/about";
+import Contact from "./components/contact";
+import Habilities from "./components/habilities";
+import Presentation from "./components/presentation";
+import Nav from "./ui/nav";
+
+function App() {
+  return (
+    <>
+      <Nav />
+      <Container maxW="container.lg">
+        <Presentation />
+        <About />
+        <Habilities />
+        <Contact />
+      </Container>
+    </>
+  );
+}
+
+export default App;

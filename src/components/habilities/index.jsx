@@ -1,0 +1,86 @@
+import React from "react";
+import { Box, Grid, GridItem, Heading, Image, Stack, Text } from "@chakra-ui/react";
+import { motion, useAnimation } from "framer-motion";
+import { useInView } from "react-intersection-observer";
+import { Context } from "../../Provider";
+import { BsFillPatchCheckFill } from "react-icons/bs";
+import { FaReact, FaDatabase } from "react-icons/fa";
+
+function Habilities() {
+  const { setCurrentTarget } = React.useContext(Context);
+  const { ref, inView } = useInView({
+    threshold: 0.2,
+  });
+  const animation = useAnimation();
+
+  React.useEffect(() => {
+    if (inView) {
+      setCurrentTarget(2);
+      animation.start({
+        y: 20,
+        opacity: 1,
+        transition: {
+          duration: 1,
+        },
+      });
+    }
+    if (!inView) animation.start({ y: 0, opacity: 0 });
+  }, [inView]);
+
+  const languagesFrontend = ["HTML", "React.js", "CSS", "Redux", "Javascript", "Chakra UI", "Material UI", "Bootstrap"];
+  const languagesBackend = ["Node.js", "Firebase", "PHP", "MySQL"];
+
+  return (
+    <motion.div animate={animation}>
+      <Stack h="100vh" id="Habilities" ref={ref}>
+        <Heading>Habilities</Heading>
+        <Stack w="100%" h="100%" justifyContent="center">
+          <Stack direction="row" flexFlow="row wrap" justifyContent="center" alignItems="center" gap={2}>
+            <Stack bg="#25315a" p={6} minH={280} maxW="100%" alignItems="center" gap={8}>
+              <Heading size="md" display="flex" direction="row" alignItems="center" gap={2}>
+                Frontend
+                <Box color="blue.200">
+                  <FaReact />
+                </Box>
+              </Heading>
+              <Grid templateColumns="repeat(2, minmax(120px, 150px))" gap={4}>
+                {languagesFrontend.map((language) => (
+                  <GridItem as={Stack} alignItems="center" direction="row" gap={2}>
+                    <Box color="blue.300">
+                      <BsFillPatchCheckFill />
+                    </Box>
+                    <Stack alignItems="center">
+                      <Text fontSize="sm"> {language}</Text>
+                    </Stack>
+                  </GridItem>
+                ))}
+              </Grid>
+            </Stack>
+            <Stack bg="#25315a" margin="0 !important" p={6} minH={280} maxW="100%" alignItems="center" gap={8}>
+              <Heading size="md" display="flex" direction="row" alignItems="center" gap={2}>
+                Backend
+                <Box color="blue.200">
+                  <FaDatabase />
+                </Box>
+              </Heading>
+              <Grid templateColumns="repeat(2, minmax(120px, 150px))" gap={4}>
+                {languagesBackend.map((language) => (
+                  <GridItem as={Stack} alignItems="center" direction="row" gap={2}>
+                    <Box color="blue.300">
+                      <BsFillPatchCheckFill />
+                    </Box>
+                    <Stack alignItems="center">
+                      <Text fontSize="sm"> {language}</Text>
+                    </Stack>
+                  </GridItem>
+                ))}
+              </Grid>
+            </Stack>
+          </Stack>
+        </Stack>
+      </Stack>
+    </motion.div>
+  );
+}
+
+export default Habilities;
