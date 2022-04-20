@@ -1,5 +1,5 @@
 import React from "react";
-import { Box, Grid, GridItem, Heading, Image, Stack, Text } from "@chakra-ui/react";
+import { Box, Divider, Grid, GridItem, Stack, Text } from "@chakra-ui/react";
 import { motion, useAnimation } from "framer-motion";
 import { useInView } from "react-intersection-observer";
 import { Context } from "../../Provider";
@@ -10,6 +10,8 @@ function Habilities() {
   const { setCurrentTarget } = React.useContext(Context);
   const { ref, inView } = useInView({
     threshold: 0.2,
+    trackVisibility: true,
+    delay: 200,
   });
   const animation = useAnimation();
 
@@ -33,16 +35,23 @@ function Habilities() {
   return (
     <motion.div animate={animation}>
       <Stack h="100vh" id="Habilities" ref={ref}>
-        <Heading>Habilities</Heading>
-        <Stack w="100%" h="100%" justifyContent="center">
+        <Stack textAlign="center">
+          <Text fontSize=".9rem" letterSpacing=".5px" color="gray.200">
+            My skills
+          </Text>
+          <Text fontSize="1.23rem" letterSpacing=".6px" color="#afd7fb" margin="0 !important">
+            Habilities
+          </Text>
+        </Stack>
+        <Stack w="100%" h="100%" paddingTop={10}>
           <Stack direction="row" flexFlow="row wrap" justifyContent="center" alignItems="center" gap={2}>
-            <Stack bg="#25315a" p={6} minH={280} maxW="100%" alignItems="center" gap={8}>
-              <Heading size="md" display="flex" direction="row" alignItems="center" gap={2}>
+            <Stack bg="#25315a" borderRadius={6} p={6} minH={280} maxW="100%" alignItems="center" gap={8}>
+              <Text fontSize="lg" color="blue.100" display="flex" direction="row" alignItems="center" gap={2}>
                 Frontend
                 <Box color="blue.200">
                   <FaReact />
                 </Box>
-              </Heading>
+              </Text>
               <Grid templateColumns="repeat(2, minmax(120px, 150px))" gap={4}>
                 {languagesFrontend.map((language) => (
                   <GridItem as={Stack} alignItems="center" direction="row" gap={2}>
@@ -56,13 +65,13 @@ function Habilities() {
                 ))}
               </Grid>
             </Stack>
-            <Stack bg="#25315a" margin="0 !important" p={6} minH={280} maxW="100%" alignItems="center" gap={8}>
-              <Heading size="md" display="flex" direction="row" alignItems="center" gap={2}>
+            <Stack bg="#25315a" borderRadius={6} margin="0 !important" p={6} minH={280} maxW="100%" alignItems="center" gap={8}>
+              <Text fontSize="lg" color="blue.100" display="flex" direction="row" alignItems="center" gap={2}>
                 Backend
                 <Box color="blue.200">
                   <FaDatabase />
                 </Box>
-              </Heading>
+              </Text>
               <Grid templateColumns="repeat(2, minmax(120px, 150px))" gap={4}>
                 {languagesBackend.map((language) => (
                   <GridItem as={Stack} alignItems="center" direction="row" gap={2}>

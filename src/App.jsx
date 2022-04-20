@@ -4,6 +4,7 @@ import About from "./components/about";
 import Contact from "./components/contact";
 import Habilities from "./components/habilities";
 import Presentation from "./components/presentation";
+import Footer from "./ui/footer";
 import Nav from "./ui/nav";
 
 function App() {
@@ -15,6 +16,7 @@ function App() {
         <About />
         <Habilities />
         <Contact />
+        <Footer />
       </Container>
     </>
   );

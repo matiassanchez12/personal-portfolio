@@ -10,7 +10,7 @@ export default extendTheme({
         scrollBehavior: "smooth",
       },
       body: {
-        fontFamily: "Poppins, sans-serif",
+        fontFamily: "'Poppins', 'sans-serif'",
       },
     },
   },
