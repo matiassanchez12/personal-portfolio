@@ -32,8 +32,8 @@ function Form() {
       <Stack>
         <Button
           w="120px"
-          bg="hsl(240deg 100% 70%)"
-          color="blackAlpha.800"
+          bg="hsl(240deg 100% 63%)"
+          color="gray.200"
           fontWeight={500}
           _hover={{ bg: "hsl(240deg 100% 66%)" }}
           fontSize=".78rem"

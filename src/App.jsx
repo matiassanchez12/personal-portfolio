@@ -16,8 +16,8 @@ function App() {
         <About />
         <Habilities />
         <Contact />
-        <Footer />
       </Container>
+      <Footer />
     </>
   );
 }

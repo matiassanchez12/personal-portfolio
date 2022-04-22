@@ -6,6 +6,7 @@ import { Context } from "../../Provider";
 import Form from "../../ui/form/Form";
 import { FaMapMarkerAlt } from "react-icons/fa";
 import { MdEmail } from "react-icons/md";
+import Footer from "../../ui/footer";
 
 function Contact() {
   const { setCurrentTarget } = React.useContext(Context);
@@ -32,7 +33,7 @@ function Contact() {
 
   return (
     <motion.div animate={animation}>
-      <Stack h="100vh" id="Contact" gap={6} ref={ref}>
+      <Stack h={{ base: "100vh", lg: "80vh" }} id="Contact" gap={6} ref={ref} paddingTop={6}>
         <Stack textAlign="center">
           <Text fontSize=".9rem" letterSpacing=".5px" color="gray.200">
             Let's work together!

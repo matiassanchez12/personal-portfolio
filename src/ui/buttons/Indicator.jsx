@@ -9,7 +9,7 @@ function Indicator({ index }) {
       as="svg"
       position="absolute"
       left="13px"
-      fill="hsl(240deg 100% 74%)"
+      fill="hsl(240deg 100% 68%)"
       transition=".4s"
       bottom="0"
       width="94px"

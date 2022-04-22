@@ -40,7 +40,16 @@ function About() {
         </Stack>
         <Stack flex={1} direction="row" justifyContent="center">
           <Stack flex={1} alignItems="center">
-            <Image src="https://bit.ly/dan-abramov" width={250} h={250} borderRadius={10} />
+            <Image src="https://bit.ly/dan-abramov" width={250} h={250} borderRadius="30% 70% 70% 30% / 30% 30% 70% 70%" zIndex={2} />
+            {/* <Box
+              width={270}
+              h={270}
+              top={85}
+              left="95px"
+              position="absolute"
+              bg="hsl(240deg 100% 73%)"
+              borderRadius="70% 30% 30% 70% / 56% 43% 57% 44%"
+            ></Box> */}
           </Stack>
           <Stack flex={1} gap={4}>
             <Text fontSize=".9rem" maxW={400} lineHeight={1.4}>
