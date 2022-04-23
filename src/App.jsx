@@ -11,7 +11,7 @@ function App() {
   return (
     <>
       <Nav />
-      <Container maxW="container.lg">
+      <Container maxW="container.lg" h="100%">
         <Presentation />
         <About />
         <Habilities />
