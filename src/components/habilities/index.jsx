@@ -17,7 +17,7 @@ function Habilities() {
 
   React.useEffect(() => {
     if (inView) {
-      setCurrentTarget(2);
+      setCurrentTarget(3);
       animation.start({
         y: 20,
         opacity: 1,
@@ -34,13 +34,13 @@ function Habilities() {
 
   return (
     <motion.div animate={animation}>
-      <Stack h="100vh" id="Habilities" ref={ref}>
+      <Stack h={{ base: "100vh", lg: "100vh" }} id="Habilidades" ref={ref}>
         <Stack textAlign="center">
-          <Text fontSize=".9rem" letterSpacing=".5px" color="gray.200">
-            My skills
+          <Text fontSize="1rem" letterSpacing=".5px" color="gray.200">
+            Tecnologías que manejo
           </Text>
-          <Text fontSize="1.23rem" letterSpacing=".6px" color="#afd7fb" margin="0 !important">
-            Habilities
+          <Text fontSize="1.33rem" letterSpacing=".6px" color="#afd7fb" margin="0 !important">
+            Habilidades
           </Text>
         </Stack>
         <Stack w="100%" h="100%" paddingTop={10}>

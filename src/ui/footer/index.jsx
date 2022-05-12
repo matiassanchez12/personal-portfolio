@@ -4,8 +4,8 @@ import { AiOutlineLinkedin, AiFillGithub, AiFillMail } from "react-icons/ai";
 
 function Footer() {
   return (
-    <Box marginTop={6}>
-      <Box bottom={2} zIndex={4}>
+    <Box marginTop={{ base: 16, lg: 0 }} paddingTop={2}>
+      <Box bottom={2} h="100%">
         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320">
           <path
             fill="#2a4365"
@@ -21,22 +21,16 @@ function Footer() {
         bg="blue.800"
         paddingInline="6rem"
         paddingBottom={4}
-        height={{ base: 160, lg: 100 }}
+        height={{ base: 180, lg: 100 }}
         w="100%"
         xmlns="http://www.w3.org/2000/svg"
         viewBox="0 0 1440 320"
         flexFlow="row wrap"
         gap={16}
       >
-        <Stack flex={1} fontSize="0.68rem">
+        <Stack flex={1} fontSize="0.78rem" alignItems="center">
           <Text margin="0 !important" w="160px" borderRadius={5} p={1} color="gray.300" bg="gray.700" textAlign="center">
-            <span>"Y no soy lo que tengo</span>
-            <br />
-            <span>Y no soy lo que llevo</span>
-            <br />
-            <span>Solo soy lo que dejo</span>
-            <br />
-            <span>Ahora soy un recuerdo"</span>
+            Matias Sanchez © 2022
           </Text>
         </Stack>
         <Stack flex={1} direction="row" justifyContent={{ base: "center", lg: "end" }} alignItems="center">

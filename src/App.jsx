@@ -6,6 +6,7 @@ import Habilities from "./components/habilities";
 import Presentation from "./components/presentation";
 import Footer from "./ui/footer";
 import Nav from "./ui/nav";
+import Projects from "./components/projects";
 
 function App() {
   return (
@@ -14,6 +15,7 @@ function App() {
       <Container maxW="container.lg" h="100%">
         <Presentation />
         <About />
+        <Projects />
         <Habilities />
         <Contact />
       </Container>

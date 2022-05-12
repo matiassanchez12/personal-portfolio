@@ -1,6 +1,7 @@
 import React from "react";
 import { Stack } from "@chakra-ui/react";
 import { AiOutlineHome, AiOutlineUser, AiOutlineBook, AiOutlineFileText } from "react-icons/ai";
+import { GrProjects } from "react-icons/gr";
 import { BsBook } from "react-icons/bs";
 import ButtonAccess from "../buttons/ButtonAccess";
 import Indicator from "../buttons/Indicator";
@@ -15,8 +16,9 @@ function Nav() {
       bg="rgb(199 181 255 / 13%)"
       overflow="hidden"
       p="1.5rem .5rem"
-      w="328px"
+      w="388px"
       h="72px"
+      backdropFilter="blur(15px)"
       maxW="100%"
       boxShadow="0 8px 32px hsla(231, 44%, 45%, .2)"
       borderRadius={6}
@@ -30,16 +32,19 @@ function Nav() {
       right={0}
       zIndex={20}
     >
-      <ButtonAccess isTarget={currentTarget === 0} name="Home">
+      <ButtonAccess isTarget={currentTarget === 0} name="Inicio">
         <AiOutlineHome size="1.5rem" />
       </ButtonAccess>
-      <ButtonAccess isTarget={currentTarget === 1} name="About">
+      <ButtonAccess isTarget={currentTarget === 1} name="Sobre mí">
         <AiOutlineUser size="1.5rem" />
       </ButtonAccess>
-      <ButtonAccess isTarget={currentTarget === 2} name="Habilities">
+      <ButtonAccess isTarget={currentTarget === 2} name="Proyectos">
         <BsBook size="1.5rem" />
       </ButtonAccess>
-      <ButtonAccess isTarget={currentTarget === 3} name="Contact">
+      <ButtonAccess isTarget={currentTarget === 3} name="Habilidades">
+        <AiOutlineBook size="1.5rem" />
+      </ButtonAccess>
+      <ButtonAccess isTarget={currentTarget === 4} name="Contacto">
         <AiOutlineFileText size="1.5rem" />
       </ButtonAccess>
       <Indicator index={currentTarget} />

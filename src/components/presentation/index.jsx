@@ -35,7 +35,7 @@ function Presentation() {
 
   return (
     <motion.div ref={ref} layout animate={animation} exit={{ opacity: 0 }} initial={{ y: -40, opacity: 0 }}>
-      <Stack h="100vh" justifyContent="center" id="Home">
+      <Stack h="100vh" justifyContent="center" id="Inicio">
         <Stack justifyContent="center" minH={500} gap={4}>
           <Stack alignItems="center">
             <Box>
@@ -46,7 +46,7 @@ function Presentation() {
                 boxSizing="content-box"
                 size="2xl"
                 name="Dan Abrahmov"
-                src="https://bit.ly/dan-abramov"
+                src="src/assets/img/00.jpeg"
               />
             </Box>
           </Stack>
@@ -79,12 +79,19 @@ function Presentation() {
             </Stack>
           </Stack>
           <Stack alignItems="center">
-            <Button>
-              <Text fontSize="smaller" marginRight={2}>
-                Download CV
-              </Text>
-              <AiOutlineDownload />
-            </Button>
+            <Link
+              textDecoration="none"
+              _hover={{ textDecoration: "none" }}
+              href="src/assets/Matias-Sanchez-Developer.pdf"
+              target="_blank"
+            >
+              <Button>
+                <Text fontSize="smaller" marginRight={2}>
+                  Download CV
+                </Text>
+                <AiOutlineDownload />
+              </Button>
+            </Link>
           </Stack>
         </Stack>
       </Stack>
