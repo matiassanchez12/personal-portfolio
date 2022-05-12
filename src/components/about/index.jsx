@@ -30,7 +30,7 @@ function About() {
 
   return (
     <motion.div animate={animation}>
-      <Stack h="100vh" id="Sobre mí" ref={ref} gap={8}>
+      <Stack h="120vh" id="Sobre mí" ref={ref} gap={8}>
         <Stack textAlign="center">
           <Text fontSize="1rem" letterSpacing=".5px" color="gray.200">
             Un poco
@@ -41,12 +41,7 @@ function About() {
         </Stack>
         <Stack flex={1} justifyContent="center" gap={4}>
           <Stack flex={{ base: 0, lg: 1 }} alignItems="center">
-            <Image
-              src="/src/assets/img/undraw_designer_re_5v95.svg"
-              width={{ base: 150, lg: 200 }}
-              h={{ base: 150, lg: 200 }}
-              zIndex={2}
-            />
+            <Image src="/undraw_designer_re_5v95.svg" width={{ base: 150, lg: 200 }} h={{ base: 150, lg: 200 }} zIndex={2} />
           </Stack>
           <Stack flex={2} gap={4} textAlign={{ base: "center", lg: "justify" }} alignItems="center">
             <Text fontSize={{ base: ".9rem", lg: "1rem" }} lineHeight={1.7} maxW={650} letterSpacing={1.2}>

@@ -45,8 +45,7 @@ function Presentation() {
                 border="2px solid #007eeb"
                 boxSizing="content-box"
                 size="2xl"
-                name="Dan Abrahmov"
-                src="/src/assets/img/00.jpeg"
+                src="/00.jpeg"
               />
             </Box>
           </Stack>
@@ -79,12 +78,7 @@ function Presentation() {
             </Stack>
           </Stack>
           <Stack alignItems="center">
-            <Link
-              textDecoration="none"
-              _hover={{ textDecoration: "none" }}
-              href="/src/assets/Matias-Sanchez-Developer.pdf"
-              target="_blank"
-            >
+            <Link textDecoration="none" _hover={{ textDecoration: "none" }} href="/Matias-Sanchez-Developer.pdf" target="_blank">
               <Button>
                 <Text fontSize="smaller" marginRight={2}>
                   Download CV
