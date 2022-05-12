@@ -46,7 +46,7 @@ function Presentation() {
                 boxSizing="content-box"
                 size="2xl"
                 name="Dan Abrahmov"
-                src="src/assets/img/00.jpeg"
+                src="/src/assets/img/00.jpeg"
               />
             </Box>
           </Stack>
@@ -82,7 +82,7 @@ function Presentation() {
             <Link
               textDecoration="none"
               _hover={{ textDecoration: "none" }}
-              href="src/assets/Matias-Sanchez-Developer.pdf"
+              href="/src/assets/Matias-Sanchez-Developer.pdf"
               target="_blank"
             >
               <Button>

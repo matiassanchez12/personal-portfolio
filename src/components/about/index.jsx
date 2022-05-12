@@ -42,7 +42,7 @@ function About() {
         <Stack flex={1} justifyContent="center" gap={4}>
           <Stack flex={{ base: 0, lg: 1 }} alignItems="center">
             <Image
-              src="src/assets/img/undraw_designer_re_5v95.svg"
+              src="/src/assets/img/undraw_designer_re_5v95.svg"
               width={{ base: 150, lg: 200 }}
               h={{ base: 150, lg: 200 }}
               zIndex={2}
